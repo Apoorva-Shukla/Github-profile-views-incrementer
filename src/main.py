@@ -2,7 +2,7 @@ import threading, requests
 
 USERNAME = 'Apoorva-Shukla'
 URL = f"https://visitor-badge.glitch.me/badge?page_id={USERNAME}"
-INCREASE = 300
+INCREASE = 5000
 
 def thread_function(name):
     requests.head(URL)
