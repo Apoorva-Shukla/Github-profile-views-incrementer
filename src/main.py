@@ -2,7 +2,7 @@ import threading, requests
 
 USERNAME = 'Apoorva-Shukla'
 URL = f"https://visitor-badge.glitch.me/badge?page_id={USERNAME}"
-
+INCREASE = 300
 
 def thread_function(name):
     requests.head(URL)
@@ -11,8 +11,7 @@ def thread_function(name):
 if __name__ == "__main__":
     threads = list()
 
-    for index in range(3000):
+    for index in range(INCREASE):
         x = threading.Thread(target=thread_function, args=(index,))
         threads.append(x)
         x.start()
-        print(index)
